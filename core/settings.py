@@ -2,7 +2,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "your-secret-key"
 DEBUG = False
-ALLOWED_HOSTS = ["194.226.139.225", "localhost"]
+ALLOWED_HOSTS = ["194.226.139.225", "127.0.0.1", "localhost"]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -41,4 +41,5 @@ USE_I18N = True
 USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "main" / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
