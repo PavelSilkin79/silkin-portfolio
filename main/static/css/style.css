@@ -1,0 +1,90 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    background: url("../img/background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+  }
+
+  /* затемнение поверх фонового изображения */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* 55% прозрачности */
+    z-index: -1;
+  }
+
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .card img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  /* ===== Фоновый блок главной страницы ===== */
+  .hero-section {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content {
+    position: absolute;
+    bottom: 50px; /* отступ снизу */
+    left: 50px;   /* отступ слева */
+    z-index: 2;
+  }
+  .portfolio-section p,
+  .contacts-section p {
+    margin-top: 30px;
+  }
+
+  /* Анимация появления */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Увеличение фото при наведении */
+.zoomable {
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.zoomable:hover {
+  transform: scale(1.05);
+}
+
+/* Ровные карточки */
+.portfolio-card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
